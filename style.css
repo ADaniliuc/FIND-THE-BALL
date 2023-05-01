@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bruno Ace SC', cursive;
+    user-select: none;
+}
+
+html,
+body {
+    min-height: 100vh;
+    background: rgb(68, 68, 68);
+}
+
+.container {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 2% 2%;
+}
+
+.information {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0% 3%;
+}
+
+.information div:first-child {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.information div:last-child {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.status {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    line-height: 7rem;
+    white-space: nowrap;
+}
+
+.cold {
+    color: blue;
+}
+
+.movements {
+    font-weight: bolder;
+    padding-left: 25%;
+    font-size: 1.5em;
+    line-height: 7rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.field {
+    background-color: rgb(219, 219, 219);
+    opacity: 1;
+    flex: 1;
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.field>p {
+    position: absolute;
+    height: 1rem;
+    aspect-ratio: 1/1;
+    background-color: rgb(20, 0, 0);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#ball {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: inherit;
+    top: -1000px;
+    left: -1000px;
+    z-index: 1;
+}
+
+.startStatus {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(1, 1, 26, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.startStatus p {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+}
+
+#start {
+    font-weight: bold;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
