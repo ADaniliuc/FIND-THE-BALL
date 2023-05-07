@@ -10,7 +10,7 @@
 
 html,
 body {
-    min-height: 100vh;
+    min-height: 100dvh;
     background: rgb(68, 68, 68);
 }
 
